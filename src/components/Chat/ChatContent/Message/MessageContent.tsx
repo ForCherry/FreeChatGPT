@@ -160,35 +160,37 @@ const ContentView = React.memo(
             {content}
           </ReactMarkdown>
         </div>
-        {/*<div className='flex justify-end gap-2 w-full mt-2'>*/}
-        {/*  {isDelete || (*/}
-        {/*    <>*/}
-        {/*      {role === 'assistant' && messageIndex === lastMessageIndex && (*/}
-        {/*        <RefreshButton onClick={handleRefresh} />*/}
-        {/*      )}*/}
-        {/*      {messageIndex !== 0 && <UpButton onClick={handleMoveUp} />}*/}
-        {/*      {messageIndex !== lastMessageIndex && (*/}
-        {/*        <DownButton onClick={handleMoveDown} />*/}
-        {/*      )}*/}
+        <div className='flex justify-end gap-2 w-full mt-2'>
+          {isDelete || (
+            <>
+              {!useStore.getState().generating &&
+                role === 'assistant' &&
+                messageIndex === lastMessageIndex && (
+                  <RefreshButton onClick={handleRefresh} />
+                )}
+              {messageIndex !== 0 && <UpButton onClick={handleMoveUp} />}
+              {messageIndex !== lastMessageIndex && (
+                <DownButton onClick={handleMoveDown} />
+              )}
 
-        {/*      <EditButton setIsEdit={setIsEdit} />*/}
-        {/*      <DeleteButton setIsDelete={setIsDelete} />*/}
-        {/*    </>*/}
-        {/*  )}*/}
-        {/*  {isDelete && (*/}
-        {/*    <>*/}
-        {/*      <button*/}
-        {/*        className='p-1 hover:text-white'*/}
-        {/*        onClick={() => setIsDelete(false)}*/}
-        {/*      >*/}
-        {/*        <CrossIcon />*/}
-        {/*      </button>*/}
-        {/*      <button className='p-1 hover:text-white' onClick={handleDelete}>*/}
-        {/*        <TickIcon />*/}
-        {/*      </button>*/}
-        {/*    </>*/}
-        {/*  )}*/}
-        {/*</div>*/}
+              <EditButton setIsEdit={setIsEdit} />
+              <DeleteButton setIsDelete={setIsDelete} />
+            </>
+          )}
+          {isDelete && (
+            <>
+              <button
+                className='p-1 hover:text-white'
+                onClick={() => setIsDelete(false)}
+              >
+                <CrossIcon />
+              </button>
+              <button className='p-1 hover:text-white' onClick={handleDelete}>
+                <TickIcon />
+              </button>
+            </>
+          )}
+        </div>
       </>
     );
   }
