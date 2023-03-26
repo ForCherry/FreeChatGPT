@@ -9,8 +9,6 @@ import NewMessageButton from './Message/NewMessageButton';
 import CrossIcon from '@icon/CrossIcon';
 
 import useSubmit from '@hooks/useSubmit';
-import DownloadChat from './DownloadChat';
-import ShareGPT from '@components/ShareGPT';
 
 const ChatContent = () => {
   const inputRole = useStore((state) => state.inputRole);
@@ -94,8 +92,8 @@ const ChatContent = () => {
           <div className='mt-4 flex gap-4'>
             {useStore.getState().generating || (
               <>
-                <DownloadChat saveRef={saveRef} />
-                <ShareGPT />
+                {/*<DownloadChat saveRef={saveRef} />*/}
+                {/*<ShareGPT />*/}
               </>
             )}
           </div>

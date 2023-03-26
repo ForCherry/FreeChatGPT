@@ -4,7 +4,7 @@
     <a href="https://bettergpt.chat" target="_blank"><img src="public/apple-touch-icon.png" alt="Better ChatGPT" width="100" /></a>
 </p>
 
-<h4 align="center"><b>免费、无限、强大、智能、迷人</b></h4>
+<h4 align="center"><b>体验、无限、强大、智能、迷人</b></h4>
 
 <p align="center">
 <a href="https://github.com/ztjhz/BetterChatGPT/blob/main/LICENSE" target="_blank">
@@ -44,7 +44,7 @@
 
 您准备好使用 Better ChatGPT 充分发掘 ChatGPT 的潜力了吗？
 
-Better ChatGPT 是任何想要体验对话型人工智能无限潜力的人的终极目的地。我们的应用程序利用 OpenAI 的 ChatGPT API 的全部潜力，提供了一个无与伦比的聊天机器人体验，而且完全免费，并且没有任何限制。
+Better ChatGPT 是任何想要体验对话型人工智能无限潜力的人的终极目的地。我们的应用程序利用 OpenAI 的 ChatGPT API 的全部潜力，提供了一个无与伦比的聊天机器人体验，而且完全体验，并且没有任何限制。
 
 无论您是想与虚拟助手聊天、提高语言技能，还是想享受有趣而引人入胜的对话，我们的应用都能满足您的需求。那么，为什么还要等呢？立即加入我们，探索 Better ChatGPT 的精彩世界！
 
@@ -54,7 +54,7 @@ Better ChatGPT 已经包含了大量的功能。您可以使用以下功能：
 
 ### 常规
 
-- 🌐 在任何地方完全 **免费** 访问 ChatGPT！
+- 🌐 在任何地方完全 **体验** 访问 ChatGPT！
 - 🤖 与先进的聊天机器人进行自然和动态的对话。
 - 😂 选择各种有趣和迷人的聊天机器人个性。
 
@@ -68,7 +68,7 @@ Better ChatGPT 已经包含了大量的功能。您可以使用以下功能：
 
 ### API
 
-- ⚙️ 提供您自己的 API 密钥，以超越免费 API 端点的限制
+- ⚙️ 提供您自己的 API 密钥，以超越体验 API 端点的限制
 - ⚙️ 自定义您自己的 API 代理端点
 
 ### 数据管理
@@ -87,7 +87,7 @@ Better ChatGPT 已经包含了大量的功能。您可以使用以下功能：
 要开始使用，只需访问我们的网站：<https://bettergpt.chat/>。您有 3 种方法可以开始使用 Better ChatGPT。
 
 1. 在 API 菜单中输入您从 [OpenAI API Keys](https://platform.openai.com/account/api-keys) 获得的 OpenAI API 密钥。
-2. 使用提供的免费 API 端点：[ayaka14732/ChatGPTAPIFree](https://github.com/ayaka14732/ChatGPTAPIFree)。
+2. 使用提供的体验 API 端点：[ayaka14732/ChatGPTAPIFree](https://github.com/ayaka14732/ChatGPTAPIFree)。
 3. 按照这里提供的说明托管自己的 API 端点：<https://github.com/ayaka14732/ChatGPTAPIFree>。随后，在 API 菜单中输入 API 端点。
 
 # 🙏 支持
