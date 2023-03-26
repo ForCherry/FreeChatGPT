@@ -173,6 +173,7 @@ const ContentView = React.memo(
                 <DownButton onClick={handleMoveDown} />
               )}
 
+              <CopyButton onClick={handleCopy} />
               <EditButton setIsEdit={setIsEdit} />
               <DeleteButton setIsDelete={setIsDelete} />
             </>

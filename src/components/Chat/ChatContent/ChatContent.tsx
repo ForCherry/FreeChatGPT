@@ -56,7 +56,7 @@ const ChatContent = () => {
             className='flex flex-col items-center text-sm dark:bg-gray-800 w-full'
             ref={saveRef}
           >
-            {/*<ChatTitle />*/}
+            <ChatTitle />
             {messages?.length === 0 && <NewMessageButton messageIndex={-1} />}
             {messages?.map((message, index) => (
               <React.Fragment key={index}>
@@ -91,7 +91,14 @@ const ChatContent = () => {
               </div>
             </div>
           )}
-
+          <div className='mt-4 flex gap-4'>
+            {useStore.getState().generating || (
+              <>
+                <DownloadChat saveRef={saveRef} />
+                <ShareGPT />
+              </>
+            )}
+          </div>
           <div className='w-full h-36'></div>
         </div>
       </ScrollToBottom>

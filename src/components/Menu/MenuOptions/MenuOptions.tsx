@@ -13,7 +13,6 @@ const MenuOptions = () => {
   const hideMenuOptions = useStore((state) => state.hideMenuOptions);
   return (
     <>
-      {/*<AboutMenu />*/}
       <CollapseOptions />
       <div
         className={`${
@@ -21,11 +20,12 @@ const MenuOptions = () => {
         } overflow-hidden transition-all`}
       >
         <AboutMenu />
-      <ClearConversation />
-      {/*<ImportExportChat />*/}
-      <Api />
-      {/*<SettingsMenu />*/}
-      {/*<Me />*/}
+        <ClearConversation />
+        <ImportExportChat />
+        <Api />
+        <SettingsMenu />
+        <Me />
+      </div>
     </>
   );
 };
