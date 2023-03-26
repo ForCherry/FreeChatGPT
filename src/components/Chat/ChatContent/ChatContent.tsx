@@ -3,11 +3,14 @@ import ScrollToBottom from 'react-scroll-to-bottom';
 import useStore from '@store/store';
 
 import ScrollToBottomButton from './ScrollToBottomButton';
+import ChatTitle from './ChatTitle';
 import Message from './Message';
 import NewMessageButton from './Message/NewMessageButton';
 import CrossIcon from '@icon/CrossIcon';
 
 import useSubmit from '@hooks/useSubmit';
+import DownloadChat from './DownloadChat';
+import ShareGPT from '@components/ShareGPT';
 
 const ChatContent = () => {
   const inputRole = useStore((state) => state.inputRole);
@@ -88,11 +91,7 @@ const ChatContent = () => {
               </div>
             </div>
           )}
-          {/*<div className='mt-4'>*/}
-          {/*  {useStore.getState().generating || (*/}
-          {/*    <DownloadChat saveRef={saveRef} />*/}
-          {/*  )}*/}
-          {/*</div>*/}
+
           <div className='w-full h-36'></div>
         </div>
       </ScrollToBottom>

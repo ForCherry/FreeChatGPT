@@ -1,4 +1,9 @@
-import React, { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react';
+import React, {
+  DetailedHTMLProps,
+  HTMLAttributes,
+  useEffect,
+  useState,
+} from 'react';
 import { useTranslation } from 'react-i18next';
 import ReactMarkdown from 'react-markdown';
 import { CodeProps, ReactMarkdownProps } from 'react-markdown/lib/ast-to-react';
@@ -10,14 +15,18 @@ import useStore from '@store/store';
 
 import EditIcon2 from '@icon/EditIcon2';
 import DeleteIcon from '@icon/DeleteIcon';
+import TickIcon from '@icon/TickIcon';
+import CrossIcon from '@icon/CrossIcon';
 import RefreshIcon from '@icon/RefreshIcon';
 import DownChevronArrow from '@icon/DownChevronArrow';
+import CopyIcon from '@icon/CopyIcon';
 
 import useSubmit from '@hooks/useSubmit';
 
 import { ChatInterface } from '@type/chat';
 
 import PopupModal from '@components/PopupModal';
+import TokenCount from '@components/TokenCount';
 import CommandPrompt from './CommandPrompt';
 import CodeBlock from './CodeBlock';
 import { codeLanguageSubset } from '@constants/chat';
@@ -119,9 +128,13 @@ const ContentView = React.memo(
       handleSubmit();
     };
 
+    const handleCopy = () => {
+      navigator.clipboard.writeText(content);
+    };
+
     return (
       <>
-        <div className='markdown prose w-full break-words dark:prose-invert dark'>
+        <div className='markdown prose w-full break-words dark:prose-invert dark share-gpt-message'>
           <ReactMarkdown
             remarkPlugins={[
               remarkGfm,
@@ -270,6 +283,7 @@ const UpButton = ({
     />
   );
 };
+
 const RefreshButton = ({
   onClick,
 }: {
@@ -277,6 +291,28 @@ const RefreshButton = ({
 }) => {
   return <MessageButton icon={<RefreshIcon />} onClick={onClick} />;
 };
+
+const CopyButton = ({
+  onClick,
+}: {
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+}) => {
+  const [isCopied, setIsCopied] = useState<boolean>(false);
+
+  return (
+    <MessageButton
+      icon={isCopied ? <TickIcon /> : <CopyIcon />}
+      onClick={(e) => {
+        onClick(e);
+        setIsCopied(true);
+        window.setTimeout(() => {
+          setIsCopied(false);
+        }, 3000);
+      }}
+    />
+  );
+};
+
 const EditView = ({
   content,
   setIsEdit,
@@ -474,6 +510,7 @@ const EditViewButtons = React.memo(
             </button>
           )}
         </div>
+        {sticky && <TokenCount />}
         <CommandPrompt _setContent={_setContent} />
       </div>
     );
